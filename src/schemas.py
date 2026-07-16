@@ -43,3 +43,15 @@ class CleanedDocument(BaseModel):
     ingested_at: datetime
     cleaned_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
     source_metadata: ArxivMetadata
+
+class Chunk(BaseModel):
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    document_id: str
+    chunk_index: int
+    chunk_text: str
+    token_count: int
+    title: str
+    source_url: str
+    content_hash: str
+    source_metadata: ArxivMetadata
+    chunked_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
