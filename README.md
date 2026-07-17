@@ -1,4 +1,4 @@
-# LLM Research Assistant
+# Verified LLM Research Assistant
 
 A hybrid-search RAG system that answers ML/LLM research questions using cited, independently verified evidence from arXiv papers. Built from scratch in plain Python, no LangChain, no framework abstractions, to understand and control every stage of the pipeline: ingestion, chunking, dense + sparse retrieval, reranking, generation, citation, and verification.
 
@@ -79,7 +79,7 @@ Documenting these deliberately, rather than pretending they don't exist:
 
 ```bash
 git clone <this repo>
-cd LLM_Research_Assistant
+cd verified-llm-research-assistant
 python -m venv venv
 source venv/bin/activate   # Windows: venv\Scripts\activate
 pip install -r requirements.txt
